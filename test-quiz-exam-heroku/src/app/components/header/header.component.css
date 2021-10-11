@@ -1,0 +1,55 @@
+#header .top-nav {
+  position: relative;
+  overflow: hidden;
+  background-color: #053e62;
+}
+
+#header .top-nav a {
+  float: left;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  font-size: 17px;
+  transition: text-decoration-color 300ms;
+}
+
+#header .top-nav a:hover:not(.nav-logo a:hover) {
+  text-decoration-color: whitesmoke;
+}
+
+#header .top-nav a.active {
+  text-decoration-color: whitesmoke;
+}
+
+#header .top-nav-one a,
+#header .top-nav-two a,
+#header .top-nav-three a {
+  float: right;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#header .top-nav-one a {
+  left: 45%
+}
+
+#header .top-nav-two a {
+  left: 50%
+}
+
+#header .top-nav-three a {
+  left: 56%
+}
+
+#header .top-nav-right {
+  float: right;
+}
+
+#header .nav-logo {
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  transition: none;
+}
