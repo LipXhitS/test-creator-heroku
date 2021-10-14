@@ -1,55 +1,29 @@
-#header .top-nav {
-  position: relative;
-  overflow: hidden;
-  background-color: #053e62;
+#header .nav-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  right: 0;
 }
 
-#header .top-nav a {
-  float: left;
-  color: whitesmoke;
+#header .nav-container > div {
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 0;
+  font-size: 18px;
+}
+
+#header a {
   text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-  font-size: 17px;
   transition: text-decoration-color 300ms;
+  color: whitesmoke;
 }
 
-#header .top-nav a:hover:not(.nav-logo a:hover) {
+#header a:hover {
   text-decoration-color: whitesmoke;
-}
-
-#header .top-nav a.active {
-  text-decoration-color: whitesmoke;
-}
-
-#header .top-nav-one a,
-#header .top-nav-two a,
-#header .top-nav-three a {
-  float: right;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#header .top-nav-one a {
-  left: 45%
-}
-
-#header .top-nav-two a {
-  left: 50%
-}
-
-#header .top-nav-three a {
-  left: 56%
-}
-
-#header .top-nav-right {
-  float: right;
-}
-
-#header .nav-logo {
-  font-weight: bold;
-  font-size: 30px;
-  text-decoration: none;
-  transition: none;
 }

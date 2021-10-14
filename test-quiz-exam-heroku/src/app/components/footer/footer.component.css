@@ -1,9 +1,21 @@
-#footer .bottom-nav-bar {
+#footer .fa-icon {
+  color: white;
+}
+
+#footer .footer-container {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #053e62;
-  color: whitesmoke;
-  text-align: center;
+  text-align: right;
+  padding-bottom: 1%;
+}
+
+#footer .footer-item {
+  padding-right: 2%;
+  float: right;
+}
+
+#footer .footer-item:hover {
+  cursor: pointer;
 }

@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// 3RD PARTY MODULES
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fab, faFacebook } from '@fortawesome/free-brands-svg-icons';
+
 // MATERIAL MODULE
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,8 +29,14 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fab);
+    library.addIcons(faFacebook);
+  }
+}

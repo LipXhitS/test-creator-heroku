@@ -1,6 +1,22 @@
-#home .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
+#home .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#home .left {
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#home .centered {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
