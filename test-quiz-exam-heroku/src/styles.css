@@ -2,7 +2,7 @@
 
 html, body { height: 100%; }
 html {
-  background: url(assets/images/Background/background-image.jpg) no-repeat center center fixed;
+  background: url(assets/images/Background/background-image2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -11,4 +11,5 @@ html {
 
 * {
   font-family: 'Roboto';
+  color: whitesmoke;
 }
