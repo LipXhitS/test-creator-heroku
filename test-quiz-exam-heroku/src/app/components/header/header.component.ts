@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginRegisterService } from 'src/app/services/login-register.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,10 @@ export class HeaderComponent implements OnInit {
 
   isMobile: boolean = false;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private loginRegisterService: LoginRegisterService
+  ) { }
 
   ngOnInit(): void {
     console.log(window.screen.width);
@@ -18,4 +23,12 @@ export class HeaderComponent implements OnInit {
     console.log(this.isMobile);
   }
 
+  onClickLogin(location: string) {
+    this.loginRegisterService.setRoute({"location": location});
+    this.router.navigate([location]);
+  }
+
+  onClickHome(location: string) {
+    this.router.navigate([location]);
+  }
 }

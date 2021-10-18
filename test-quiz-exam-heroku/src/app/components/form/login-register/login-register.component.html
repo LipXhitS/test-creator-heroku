@@ -1,0 +1,87 @@
+<section id="login-register">
+  <ng-container *ngIf="route === 'login'; then login; else register">
+
+  </ng-container>
+
+  <ng-template #login>
+    <div class="login-container">
+      <mat-card class="card login-card">
+        <mat-card-header>
+          <mat-card-title>LOGIN TO YOUR ACCOUNT</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form>
+            <div class="form">
+              <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="juan@ph.com">
+              </mat-form-field>
+            </div>
+            <div class="form">
+              <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <div matSuffix class="show-password">
+                  <mat-icon matSuffix (click)="showPassword()">remove_red_eye</mat-icon>
+                </div>
+                <input [type]="show ? 'text' : 'password'" matInput>
+              </mat-form-field>
+            </div>
+            <p>Forgot Password? <a>Click here</a></p>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="login-btn">
+            <button class="btn" mat-button>LOGIN</button>
+          </div>
+        </mat-card-actions>
+        <hr>
+        <mat-card-content>
+          <div class="register-nav">
+            <div class="register-nav-item">
+              <p>
+                Dont have an account yet? Create your account here.
+              </p>
+            </div>
+            <div class="register-nav-item-btn">
+              <button class="btn-nav" mat-stroked-button (click)="onClickRegister('register')">REGISTER</button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </ng-template>
+
+  <ng-template #register>
+    <div class="register-container">
+      <mat-card class="card login-card">
+        <mat-card-header>
+          <mat-card-title>CREATE AN ACCOUNT</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form>
+            <div class="form">
+              <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Juan">
+              </mat-form-field>
+            </div>
+            <div class="form">
+              <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <div matSuffix class="show-password">
+                  <mat-icon matSuffix (click)="showPassword()">remove_red_eye</mat-icon>
+                </div>
+                <input [type]="show ? 'text' : 'password'" matInput>
+              </mat-form-field>
+            </div>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="login-btn">
+            <button class="btn" mat-button>Register</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </ng-template>
+</section>

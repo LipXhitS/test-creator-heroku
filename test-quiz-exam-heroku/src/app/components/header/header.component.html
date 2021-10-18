@@ -4,12 +4,18 @@
   </ng-container>
 
   <ng-template #pc>
-    <div class="nav-container">
-      <div class="nav-item"><a href="#">HOME</a></div>
+    <mat-toolbar class="navbar">
+      <img src="../../../assets/images/Logo/Logo3.png" alt="logo" (click)="onClickHome('home')">
+      <span class="nav-spacer"></span>
+      <button mat-button>ABOUT US</button>
+      <button mat-button>CONTACT US</button>
+      <button mat-button (click)="onClickLogin('login')">LOGIN</button>
+    </mat-toolbar>
+    <!-- <div class="nav-container">
       <div class="nav-item"><a href="#">ABOUT US</a></div>
       <div class="nav-item"><a href="#">CONTACT US</a></div>
-      <div class="nav-item"><a href="#">LOGIN</a></div>
-    </div>
+      <div class="nav-item"><a (click)="onClickLogin('login')">LOGIN</a></div>
+    </div> -->
   </ng-template>
 
   <ng-template #mobile>

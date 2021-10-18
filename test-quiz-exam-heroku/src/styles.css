@@ -11,8 +11,24 @@ html {
 
 * {
   font-family: 'Roboto';
-  color: whitesmoke;
 }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form {
+  margin-top: 1%;
+}
+
+.form mat-form-field {
+  width: 100%;
+}
+
+.mat-button.btn {
+  background-color: whitesmoke;
+  color: lightskyblue;
+}
+
+hr {
+  border: 1px solid whitesmoke;
+}
