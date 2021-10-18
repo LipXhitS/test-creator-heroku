@@ -1,8 +1,43 @@
 <section id="header">
-  <div class="nav-container" *ngIf="!mobile">
-    <div class="nav-item"><a href="#">HOME</a></div>
-    <div class="nav-item"><a href="#">ABOUT US</a></div>
-    <div class="nav-item"><a href="#">CONTACT US</a></div>
-    <div class="nav-item"><a href="#">LOGIN</a></div>
-  </div>
+  <ng-container *ngIf="isMobile; then mobile; else pc">
+
+  </ng-container>
+
+  <ng-template #pc>
+    <div class="nav-container">
+      <div class="nav-item"><a href="#">HOME</a></div>
+      <div class="nav-item"><a href="#">ABOUT US</a></div>
+      <div class="nav-item"><a href="#">CONTACT US</a></div>
+      <div class="nav-item"><a href="#">LOGIN</a></div>
+    </div>
+  </ng-template>
+
+  <ng-template #mobile>
+    <div class="mobile-container">
+      <div>
+        <img src="../../../assets/images/Logo/Logo2.png" alt="logo">
+      </div>
+      <div class="login-button">
+        <button mat-flat-button>
+          <label>LOGIN</label>
+        </button>
+      </div>
+      <div class="menu-button">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>group</mat-icon>
+            <span>ABOUT US</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>contact_phone</mat-icon>
+            <span>CONTACT US</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </ng-template>
 </section>

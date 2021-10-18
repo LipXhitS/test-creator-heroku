@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
 
-  mobile: boolean = false;
+  isMobile: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.mobile = window.screen.width <= 480 ? true : false;
+    console.log(window.screen.width);
+    this.isMobile = window.screen.width <= 480 ? true : false;
+    console.log(this.isMobile);
   }
 
 }

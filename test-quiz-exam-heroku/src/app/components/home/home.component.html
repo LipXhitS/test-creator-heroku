@@ -1,5 +1,9 @@
 <section id="home">
-  <div *ngIf="!mobile">
+  <ng-container *ngIf="isMobile; then mobile; else pc">
+
+  </ng-container>
+
+  <ng-template #pc>
     <div class="split left">
       <div class="centered">
         <img src="../../../assets/images/Logo/Logo2.png" alt="logo">
@@ -11,5 +15,13 @@
         <p>Home something something introduction to website...</p>
       </div>
     </div>
-  </div>
+  </ng-template>
+
+  <ng-template #mobile>
+    <div class="mobile-container">
+      <h1>HOME TITLE</h1>
+      <p>Home something something introduction to website...</p>
+    </div>
+  </ng-template>
+
 </section>

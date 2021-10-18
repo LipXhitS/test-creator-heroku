@@ -4,11 +4,44 @@
   grid-gap: 10px;
   width: 50%;
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
   right: 0;
+}
+
+#header .mobile-container {
+  display: flex;
+  background-color: lightblue;
+}
+
+#header .mobile-container img {
+  height: auto;
+  width: 50%;
+}
+
+#header .mat-menu-container {
+  background-color: lightblue;
+}
+
+#header .menu-button {
+  padding-top: 3%;
+  padding-right: 2%;
+}
+
+#header .login-button button {
+  width: 200%;
+  background-color: white;
+}
+
+#header .login-button label {
+  color: lightblue;
+}
+
+#header .login-button {
+  padding-top: 3%;
+  padding-right: 20%;
 }
 
 #header .nav-container > div {
