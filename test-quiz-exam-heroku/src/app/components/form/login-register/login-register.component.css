@@ -1,11 +1,19 @@
 #login-register .login-container {
   width: 96%;
-  top: 15%;
+  top: 18%;
   position: fixed;
   padding: 1%;
   margin: 1%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#login-register .error-message {
+  border: 2px red solid;
+  border-radius: 3px;
+  color: red;
+  text-align: center;
+  padding: 1px;
 }
 
 #login-register .register-container {
@@ -33,21 +41,21 @@
   width: 40%;
 }
 
-#login-register .login-btn {
-  width: 100%;
-  text-align: right;
-}
-
 #login-register .register-nav {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+#login-register .btn-login {
+  width: 85%;
+  background-color: whitesmoke;
+  color: lightskyblue;
 }
 
 #login-register .btn-nav {
   background-color: lightskyblue;
   width: 85%;
-  margin-right: -4%;
   border: 2px solid whitesmoke;
 }
 

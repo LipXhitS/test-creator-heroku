@@ -16,4 +16,8 @@ export class JsonDataService {
     let ObjStr = sessionStorage.getItem(key);
     return ObjStr ? ObjStr : obj;
   }
+
+  clearStorage(key: string): void {
+    sessionStorage.removeItem(key);
+  }
 }

@@ -8,6 +8,34 @@
   padding-top: 20px;
 }
 
+#home .logged-in-container {
+  display: flex;
+  margin-top: 8%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+#home .logged-in-card {
+  width: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 300px;
+  background-color: #82D1FF;
+}
+
+#home .logged-in-card .mat-card-content {
+  margin-top: 25%;
+  margin-bottom: auto;
+}
+
+#home .logged-in-card .mat-card-content button {
+  margin-top: 5%;
+  width: 75%;
+  height: 60px;
+  border: 2px whitesmoke solid;
+}
+
 #home .top {
   margin-left: -10%;
 }

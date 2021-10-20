@@ -4,7 +4,33 @@
   </ng-container>
 
   <ng-template #pc>
+    <ng-container *ngIf="this.userDetails.email; then loggedIn; else loggedOut">
 
+    </ng-container>
+
+    <ng-template #loggedIn>
+      <div class="logged-in-container">
+        <mat-card class="logged-in-card">
+          <mat-card-content>
+            <h1>Take a quiz</h1>
+            <p>Test your skills</p>
+            <button mat-stroked-button>START</button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="logged-in-card">
+          <mat-card-content>
+            <h1>Create a quiz</h1>
+            <p>Share your skills</p>
+            <button mat-stroked-button>START</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </ng-template>
+
+    <ng-template #loggedOut>
+
+    </ng-template>
   </ng-template>
 
   <ng-template #mobile>

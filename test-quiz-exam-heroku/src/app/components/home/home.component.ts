@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDetailsService } from 'src/app/services/user-details.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,13 @@ export class HomeComponent implements OnInit {
 
   isMobile: boolean = false;
 
-  constructor() { }
+  userDetails: any;
+
+  constructor(
+    private userDetailService: UserDetailsService
+    ) {
+      this.userDetails = this.userDetailService.userDetails;
+    }
 
   ngOnInit(): void {
     this.isMobile = window.screen.width <= 480 ? true : false;

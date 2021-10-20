@@ -3,11 +3,15 @@
 }
 
 #header .navbar {
-  background-color: lightskyblue;
+  background-color: #82D1FF;
 }
 
 #header .navbar img {
   width: auto;
   height: 100%;
   cursor: pointer;
+}
+
+.user-menu {
+  background-color: #82D1FF;
 }

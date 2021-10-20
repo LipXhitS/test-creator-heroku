@@ -5,11 +5,25 @@
 
   <ng-template #pc>
     <mat-toolbar class="navbar">
-      <img src="../../../assets/images/Logo/Logo3.png" alt="logo" (click)="onClickHome('home')">
+      <img src="../../../assets/images/Logo/Logo.png" alt="logo" (click)="onClickHome('home')">
       <span class="nav-spacer"></span>
+      <button mat-button>HOME</button>
       <button mat-button>ABOUT US</button>
       <button mat-button>CONTACT US</button>
-      <button mat-button (click)="onClickLogin('login')">LOGIN</button>
+      <button mat-button *ngIf="!this.userDetails.email" (click)="onClickLogin('login')">LOGIN</button>
+
+      <button mat-button *ngIf="this.userDetails.email" (click)="onClickLogin('login')" [matMenuTriggerFor]="menu">HELLO {{ this.userDetails.email }} <mat-icon>arrow_drop_down</mat-icon></button>
+      <mat-menu #menu="matMenu" class="user-menu">
+          <button mat-menu-item>
+            <span>Dashboard</span>
+         </button>
+         <button mat-menu-item>
+           <span>Profile</span>
+          </button>
+         <button mat-menu-item>
+           <span (click)="onClickLogout()">Logout</span>
+          </button>
+      </mat-menu>
     </mat-toolbar>
     <!-- <div class="nav-container">
       <div class="nav-item"><a href="#">ABOUT US</a></div>

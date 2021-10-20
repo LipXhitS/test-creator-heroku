@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // 3RD PARTY MODULES
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
@@ -13,6 +14,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginRegisterComponent } from './components/form/login-register/login-register.component';
+import { MessageServiceComponent } from './components/common/message-service/message-service.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { LoginRegisterComponent } from './components/form/login-register/login-r
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    MessageServiceComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,10 @@ import { LoginRegisterComponent } from './components/form/login-register/login-r
     MatMenuModule,
     MatDialogModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

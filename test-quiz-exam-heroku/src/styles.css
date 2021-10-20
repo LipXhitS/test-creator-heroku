@@ -2,7 +2,7 @@
 
 html, body { height: 100%; }
 html {
-  background: url(assets/images/Background/background-image2.jpg) no-repeat center center fixed;
+  background-color: #B0E2FF;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -20,15 +20,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-top: 1%;
 }
 
+.form .mat-focused .mat-form-field-label {
+  color: #ECF8FF !important;
+ }
+
+.form .mat-form-field-underline {
+  background-color: #ECF8FF !important;
+}
+
+.form .mat-form-field-ripple {
+ background-color: #ECF8FF !important;;
+}
+
 .form mat-form-field {
   width: 100%;
 }
 
 .mat-button.btn {
-  background-color: whitesmoke;
+  background-color: #ECF8FF;
   color: lightskyblue;
 }
 
 hr {
-  border: 1px solid whitesmoke;
+  border: 1px solid #ECF8FF;
+}
+
+.error-message {
+  background-color: lightcoral;
+  color: #ECF8FF;
+}
+
+.success-message {
+  background-color: lightgreen;
+  color: #ECF8FF;
 }
